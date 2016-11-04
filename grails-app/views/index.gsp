@@ -62,8 +62,7 @@
             this application, click on each to execute its default action:
         </p>
 
-        <div id="app"></div>
-        <asset:javascript src="bundle.js" />
+        <iso:bundle path="/dist/bundle.js" data="${[a:1, b: 2]}"/>
 
         <div id="controllers" role="navigation">
             <h2>Available Controllers:</h2>
