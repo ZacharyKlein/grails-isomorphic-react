@@ -5,8 +5,8 @@ module.exports = {
         index: './src/main/webapp/app/app.js'
     },
     output: {
-        path: './grails-app/assets/javascripts',
-        publicPath: '/assets/',
+        path: './src/main/webapp/dist',
+        publicPath: '/static/',
         filename: 'bundle.js'
     },
     module: {
@@ -30,4 +30,3 @@ module.exports = {
         ]
     }
 };
-
