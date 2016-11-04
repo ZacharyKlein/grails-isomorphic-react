@@ -1,6 +1,4 @@
 import React from 'react';
-import Immutable from 'immutable'
-import autobind from './util/autobind'
 import {Modal, Button} from 'react-bootstrap';
 
 class About extends React.Component {
@@ -8,25 +6,25 @@ class About extends React.Component {
     constructor(props) {
         super(props); // must call before "this" is accessed
 
-        autobind(this, 'toggle');
-        
         this.state = {
-            data: Immutable.fromJS({
-                showModal: false
-            })
+         showModal: false,
+         initialData: props.initialData
         };
-    }
+
+        this.toggleModal = this.toggleModal.bind(this);
+    };
+
 
     toggleModal() {
-        const data = this.state.data.set('showModal', !this.state.data.get('showModal'));
+        const data = this.state.showModal = !this.state.showModal;
         this.setState({data});
     }
 
     render() {
-        const showModal = this.state.data.get('showModal');
+        const showModal = this.state.showModal;
 
         return <div>
-            <h1>Hello from React!</h1>
+            <h1>Hello from React {this.state.initialData}!</h1>
 
             <Button bsStyle="success" onClick={this.toggleModal}>About Us</Button>
 

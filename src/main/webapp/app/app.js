@@ -6,14 +6,14 @@ import About from './about';
 
 if (typeof window !== 'undefined' && typeof document !== 'undefined' && typeof document.createElement === 'function') {
   window.renderClient = (data) => {
-    ReactDOM.render(<About source={data.source} />, document.getElementById('app'));
+    ReactDOM.render(<About initialData={data.initialData} />, document.getElementById('app'));
   }
 }
 else {
   global.renderServer = (data) => {
     let json = JSON.parse(data);
     return ReactDOMServer.renderToString (
-      <About source={json.source} />
+      <About initialData={json.initialData} />
     )
   };
 }
