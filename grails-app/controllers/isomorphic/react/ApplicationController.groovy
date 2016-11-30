@@ -1,7 +1,8 @@
 package isomorphic.react
 
+import com.ociweb.Book
+import grails.converters.JSON
 import grails.core.GrailsApplication
-import grails.util.Environment
 import grails.plugins.*
 
 class ApplicationController implements PluginManagerAware {
@@ -11,5 +12,10 @@ class ApplicationController implements PluginManagerAware {
 
     def index() {
         [grailsApplication: grailsApplication, pluginManager: pluginManager]
+    }
+
+    def books() {
+
+        [books: Book.list()]
     }
 }
