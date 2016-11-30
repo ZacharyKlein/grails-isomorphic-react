@@ -14,7 +14,7 @@
     </div>
 
     <section class="row colset-2-its">
-        <iso:bundle path="/dist/bundle-books.js" data="${[books: books]}" element="books"/>
+        <iso:bundle path="dist/bundle-books.js" data="${[books: books]}" element="books"/>
     </section>
 </div>
 

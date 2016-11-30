@@ -1,7 +1,6 @@
 package isomorphic.react
 
 import com.ociweb.Book
-import grails.converters.JSON
 import grails.core.GrailsApplication
 import grails.plugins.*
 

@@ -10,6 +10,5 @@ build/
 .settings
 .classpath
 
-
-bundle*.js
+/src/main/webapp/dist/*
 node_modules/

@@ -32,10 +32,10 @@ class Books extends React.Component {
 
   componentDidMount() {
     console.log('componentDidMount');
-      fetch('/api/books')
-        .then(r =>  r.json())
-        .then(json => this.setState({books: json}))
-        .catch(ex => console.error('parsing failed', ex))
+    fetch('/api/books')
+      .then(r =>  r.json())
+      .then(json => this.setState({books: json}))
+      .catch(ex => console.error('parsing failed', ex))
   }
 
   render() {
