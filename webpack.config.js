@@ -2,12 +2,13 @@ var path = require('path');
 
 module.exports = {
     entry: {
-        index: './src/main/webapp/app/app.js'
+        index: './src/main/webapp/app/app.js',
+        books: './src/main/webapp/app/books.js'
     },
     output: {
         path: './src/main/webapp/dist',
         publicPath: '/static/',
-        filename: 'bundle.js'
+        filename: 'bundle-[name].js'
     },
     module: {
         loaders: [
